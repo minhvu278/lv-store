@@ -1,0 +1,26 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  appearance: none;
+  background: none;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+  text-align: inherit;
+}
+
+input:focus {
+  outline: none;
+}

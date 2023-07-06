@@ -1,0 +1,13 @@
+// Font
+$font-noto-sans: 'Noto Sans JP', sans-serif;
+$font-hiragino: 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+
+//Color
+$color-black: #212B36;
+
+// Screen width
+$screen-pc-min-width: 768px;
+$screen-sp-max-width: $screen-pc-min-width - 1px;
+$screen-figma-min-width: 1440px;
+$screen-figma-inner-min-width: 1170px;
+$screen-figma-inner-min-width-bigger: $screen-figma-min-width - 80px * 2;

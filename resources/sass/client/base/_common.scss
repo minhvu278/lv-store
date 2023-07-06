@@ -1,0 +1,24 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.d-none {
+    display: none !important;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.overflow-hidden--sp {
+    @include responsive(sp) {
+        overflow: hidden !important;
+    }
+}
+
+button {
+    user-select: none;
+}
+
+.margin-validate-name {
+    margin: -20px 0px 20px 0px;
+}

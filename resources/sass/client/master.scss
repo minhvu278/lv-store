@@ -1,0 +1,14 @@
+@use '../../../node_modules/normalize.css';
+
+@use 'base/common' as *;
+@use 'base/mixins' as *;
+@use 'base/reset' as *;
+@use 'base/variables' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+body {
+    font: normal normal 400 14px/22px $font-noto-sans;
+    word-break: break-word;
+    color: $color-black;
+}
