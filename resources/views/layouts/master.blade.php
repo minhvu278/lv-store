@@ -7,9 +7,9 @@
     <title>@yield('title', 'Shop')</title>
 {{--    <link rel="icon" type="image/x-icon" href="{{ Vite::asset('resources/client/assets/common/favicon-32x32.ico') }}">--}}
     @vite([
-        'resources/client/sass/master.scss',
-        'resources/client/sass/partials/header.scss',
-        'resources/client/sass/partials/footer.scss',
+        'resources/sass/client/master.scss',
+        'resources/sass/client/partials/header.scss',
+        'resources/sass/client/partials/footer.scss',
 //        'node_modules/toastr/build/toastr.min.css',
     ])
     @stack('css')
@@ -19,7 +19,7 @@
 <main>@yield('content')</main>
 @include('partials.footer')
 @vite([
-//    'resources/client/js/master.js',
+    'resources/js/master.js',
 ])
 @stack('js')
 

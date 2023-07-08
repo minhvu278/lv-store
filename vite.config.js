@@ -13,6 +13,7 @@ export default defineConfig({
                 'resources/sass/client/master.scss',
                 'resources/sass/client/partials/header.scss',
                 'resources/sass/client/partials/footer.scss',
+                'resources/js/master.js',
             ],
             refresh: true,
         }),

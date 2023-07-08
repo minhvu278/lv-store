@@ -1,0 +1,12 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+header {
+    background-color: $background-white;
+    color: $dark-blue;
+    text-align: center;
+    user-select: none;
+    width: 100vw;
+    position: fixed;
+    z-index: 4;
+}
