@@ -4,12 +4,12 @@ $font-hiragino: 'Hiragino Sans', 'Noto Sans JP', sans-serif;
 
 //Color
 $color-black: #212B36;
-$background-white: FDFDFD;
-$dark-blue: 003459;
+$color-white: #FDFDFD;
+$dark-blue: #003459;
 
 // Screen width
 $screen-pc-min-width: 768px;
 $screen-sp-max-width: $screen-pc-min-width - 1px;
 $screen-figma-min-width: 1440px;
 $screen-figma-inner-min-width: 1170px;
-$screen-figma-inner-min-width-bigger: $screen-figma-min-width - 80px * 2;
+$screen-figma-inner-min-width-bigger: 1280px;
