@@ -18,15 +18,18 @@
                     </label>
                 </div>
             @endforeach
-            <div class="header__nav__search">
+
+        </div>
+        <div id="header__right">
+            <div class="header__right__search">
                 <input type="text">
             </div>
-            <div class="header__nav__join">
+            <div class="header__right__join">
                 <button>Join the community</button>
             </div>
-                <div class="header__nav__vnd">
-                    <span>VND</span>
-                </div>
+            <div class="header__right__vnd">
+                <span>VND</span>
+            </div>
         </div>
     </div>
 </header>
