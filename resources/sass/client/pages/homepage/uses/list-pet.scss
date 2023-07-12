@@ -36,7 +36,8 @@
                 background: var(--neutral-color-00, #FDFDFD);
                 box-shadow: 0 4px 28px -2px rgba(0, 0, 0, 0.08);
 
-                .listPet__card__image {
+                img {
+                    border-radius: 10px;
                 }
 
                 .listPet__card__info {
@@ -71,7 +72,6 @@
         @include basePcScreenWrapper();
 
         .listPet__content {
-            margin-top: 50px;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-gap: 20px;
