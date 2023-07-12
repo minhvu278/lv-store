@@ -6,4 +6,5 @@
 
 @section('content')
     @include('pages.homepage.includes.top-banner')
+    @include('pages.homepage.includes.list-pet')
 @endsection

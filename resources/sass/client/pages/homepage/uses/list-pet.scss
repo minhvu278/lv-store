@@ -1,0 +1,112 @@
+@use '../../../base/variables' as *;
+@use '../../../base/mixins' as *;
+
+#listPet {
+    #listPet__wrapper {
+        .listPet__title {
+            .listPet__title__first {
+                font: normal normal 500 16px/24px $font-noto-sans;
+            }
+            .listPet__title__second {
+                display: flex;
+                justify-content: space-between;
+
+                .listPet__title__second--text {
+                    font: normal normal 700 24px/36px $font-noto-sans;
+                    margin-top: 12px;
+                }
+
+                .listPet__title__second--button {
+                    display: flex;
+                    padding: 12px 28px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 8px;
+                    border-radius: 57px;
+                    border: 1.5px solid $dark-blue;
+                }
+            }
+        }
+
+        .listPet__content {
+            .listPet__card {
+                margin-top: 20px;
+                padding: 8px 8px 0 8px;
+                border-radius: 12px;
+                background: var(--neutral-color-00, #FDFDFD);
+                box-shadow: 0 4px 28px -2px rgba(0, 0, 0, 0.08);
+
+                .listPet__card__image {
+                }
+
+                .listPet__card__info {
+                    padding: 8px 8px 20px 8px;
+
+                    .listPet__card__info__name {
+                        font: normal normal 700 16px/24px $font-noto-sans;
+                    }
+                    .listPet__card__info__middle {
+                        padding: 6px 0;
+                        display: flex;
+                        color: $color-gray;
+                        font: normal normal 500 12px/18px $font-noto-sans;
+
+                        .listPet__card__info__middle--age {
+                            margin-left: 26px;
+                        }
+                    }
+                    .listPet__card__info__price {
+                        color: $color-black;
+                        font: normal normal 700 14px/20px $font-noto-sans;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive(pc) {
+    #listPet {
+        padding-top: 40px;
+        @include basePcScreenWrapper();
+
+        .listPet__content {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20px;
+        }
+    }
+}
+
+@include responsive(sp) {
+    #listPet {
+        padding: 20px;
+        .listPet__title {
+            .listPet__title__first {
+                font: normal normal 500 16px/24px $font-noto-sans;
+            }
+            .listPet__title__second {
+
+                .listPet__title__second--text {
+                }
+
+                a {
+                    display: none;
+                }
+            }
+        }
+
+        .listPet__content {
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
+
+            .listPet__card {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
