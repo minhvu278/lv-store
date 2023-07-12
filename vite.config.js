@@ -11,6 +11,7 @@ export default defineConfig({
 
                 // Client
                 'resources/sass/client/master.scss',
+                'resources/sass/client/pages/homepage/home.scss',
                 'resources/sass/client/partials/header.scss',
                 'resources/sass/client/partials/footer.scss',
                 'resources/js/master.js',

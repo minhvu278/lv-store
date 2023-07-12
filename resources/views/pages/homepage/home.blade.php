@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@push('css')
+    @vite(['resources/sass/client/pages/homepage/home.scss'])
+@endpush
+
 @section('content')
-    Home Page
+    @include('pages.homepage.includes.top-banner')
 @endsection
