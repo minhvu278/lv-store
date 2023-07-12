@@ -1,0 +1,109 @@
+@use '../../../base/variables' as *;
+@use '../../../base/mixins' as *;
+
+#topBanner {
+    background: var(--linear, linear-gradient(134deg, #FCEED5 6.17%, #FCEED5 75.14%, #FFE7BA 100%));
+    border-radius: 0 0 40px 40px;
+    margin-top: -10px;
+
+    #topBanner__wrapper{
+        display: flex;
+
+        .topBanner__left {
+            width: 60%;
+            margin-left: 26px;
+
+            .topBanner__left__title {
+                div:first-child {
+                    color: $dark-blue;
+                    font: normal normal 800 60px/68px $font-noto-sans;
+                    position: relative;
+                }
+                div:last-child {
+                    color: $dark-blue;
+                    font: normal normal 700 46px/60px $font-noto-sans;
+                }
+            }
+
+            .topBanner__left__description {
+                p {
+                    color: $dark-blue;
+                    font: normal normal 500 16px/24px $font-noto-sans;
+                }
+            }
+
+            .topBanner__left__button {
+                display: flex;
+                align-items: center;
+
+                .topBanner__left__button--first,
+                .topBanner__left__button--last {
+                    position: relative;
+                    padding: 14px 28px 14px 28px;
+                    border-radius: 57px;
+                    border: 1.5px solid $dark-blue;
+                    display: flex;
+                }
+
+                .topBanner__left__button--first {
+                    img {
+                        margin-left: 8px;
+                    }
+                }
+
+                .topBanner__left__button--last {
+                    background: $dark-blue;
+                    margin-left: 10px;
+                    color: $color-white;
+                }
+            }
+        }
+        .topBanner__right {
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@include responsive(pc) {
+    #topBanner {
+        @include basePcScreenWrapper();
+
+        .topBanner__left {
+            padding-top: 80px;
+        }
+    }
+}
+@include responsive(sp) {
+    #topBanner {
+        #topBanner__wrapper {
+            flex-direction: column;
+            padding: 35px;
+            text-align: center;
+
+            .topBanner__left {
+                width: 100%;
+
+                .topBanner__left__title {
+                    div:first-child {
+                        font: normal normal 800 46px/60px $font-noto-sans;
+                    }
+                    div:last-child {
+                        font: normal normal 700 28px/38px $font-noto-sans;
+                    }
+                }
+
+                .topBanner__left__description {
+                    p {
+                        font: normal normal 500 12px/18px $font-noto-sans;
+                    }
+                }
+
+                .topBanner__left__button {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

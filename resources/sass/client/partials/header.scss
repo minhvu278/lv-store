@@ -3,6 +3,7 @@
 
 header {
     background-color: $color-white;
+    background: var(--linear, linear-gradient(134deg, #FCEED5 6.17%, #FCEED5 75.14%, #FFE7BA 100%));
     color: $dark-blue;
     text-align: center;
     user-select: none;
@@ -136,7 +137,7 @@ header {
                     padding: 12px 20px 12px 16px;
                     border-radius: 46px;
                     background: $color-white;
-                    border: 1px solid red;
+                    border: 1px solid transparent;
                 }
             }
             .header__right__join {
