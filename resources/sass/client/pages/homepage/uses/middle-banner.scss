@@ -1,0 +1,89 @@
+@use '../../../base/variables' as *;
+@use '../../../base/mixins' as *;
+
+#middleBanner {
+    #middleBanner__wrapper {
+        border-radius: 20px;
+        background-color: $bg-blue;
+        display: flex;
+
+        .middleBanner__left {
+            background-image: url('/resources/assets/client/pages/homepage/middle-banner/rectangle1.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: bottom;
+        }
+        .middleBanner__right {
+            background-image: url('/resources/assets/client/pages/homepage/middle-banner/rectangle3.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: right;
+
+            .middleBanner__right__wrapper {
+                margin-left: 35%;
+
+                .middleBanner__right__title {
+                    margin-top: 34px;
+
+                    .middleBanner__right__title__first {
+                        font: normal normal 800 52px/68px $font-noto-sans;
+                    }
+                    .middleBanner__right__title__second {
+                        font: normal normal 700 36px/54px $font-noto-sans;
+                    }
+                }
+                .middleBanner__right__description {
+                    font: normal normal 500 12px/18px $font-noto-sans;
+                    padding: 8px 0 24px;
+                }
+                .middleBanner__right__button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .middleBanner__right__button--first,
+                    .middleBanner__right__button--last {
+                        position: relative;
+                        padding: 14px 28px 14px 28px;
+                        border-radius: 57px;
+                        border: 1.5px solid $dark-blue;
+                        display: flex;
+                    }
+
+                    .middleBanner__right__button--first {
+                        img {
+                            margin-left: 8px;
+                        }
+                    }
+
+                    .middleBanner__right__button--last {
+                        background: $dark-blue;
+                        margin-left: 10px;
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive(pc) {
+    #middleBanner {
+        padding-top: 60px;
+        @include basePcScreenWrapper();
+
+        .middleBanner__left {
+
+        }
+        .middleBanner__right {}
+    }
+}
+
+@include responsive(sp) {
+    #middleBanner {
+        #middleBanner__wrapper {
+            .middleBanner__left {}
+            .middleBanner__right {}
+        }
+    }
+}
