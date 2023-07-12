@@ -151,3 +151,27 @@ header {
         }
     }
 }
+
+@include responsive(sp) {
+    main {
+        padding-top: 60px - 2px;
+    }
+
+    header {
+        font: normal normal 700 13px/22px $font-noto-sans;
+        min-height: 60px;
+        max-height: 100vh;
+        overflow-y: scroll;
+
+        #header__wrapper {
+            flex-wrap: wrap;
+            padding: 10px 16px;
+
+            #header__left {
+                img {
+                    width: 89px;
+                    height: 30px;
+                }
+            }        }
+    }
+}

@@ -5,6 +5,7 @@
                 <img src="{{ Vite::asset('resources/assets/client/partials/header/logo.png') }}" alt="logo">
             </a>
         </div>
+        <div class="header__nav-control"></div>
         <div id="header__nav">
             @foreach (__('client/partials/header.items') as $item)
                 <div class="header__nav__item header__nav__item--hover">
