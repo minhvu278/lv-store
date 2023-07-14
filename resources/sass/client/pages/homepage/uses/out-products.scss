@@ -1,0 +1,133 @@
+@use '../../../base/variables' as *;
+@use '../../../base/mixins' as *;
+
+#outProducts {
+    #outProducts__wrapper {
+        .outProducts__title {
+            .outProducts__title__first {
+                font: normal normal 500 16px/24px $font-noto-sans;
+            }
+            .outProducts__title__second {
+                display: flex;
+                justify-content: space-between;
+
+                .outProducts__title__second--text {
+                    font: normal normal 700 24px/36px $font-noto-sans;
+                    margin-top: 12px;
+                }
+
+                .outProducts__title__second--button {
+                    display: flex;
+                    padding: 12px 28px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 8px;
+                    border-radius: 57px;
+                    border: 1.5px solid $dark-blue;
+                }
+            }
+        }
+
+        .outProducts__content {
+            .outProducts__card {
+                margin-top: 20px;
+                padding: 8px 8px 0 8px;
+                border-radius: 12px;
+                background: var(--neutral-color-00, #FDFDFD);
+                box-shadow: 0 4px 28px -2px rgba(0, 0, 0, 0.08);
+
+                img {
+                    border-radius: 10px;
+                }
+
+                .outProducts__card__info {
+                    padding: 8px 8px 20px 8px;
+
+                    .outProducts__card__info__name {
+                        font: normal normal 700 16px/24px $font-noto-sans;
+                    }
+                    .outProducts__card__info__middle {
+                        padding: 6px 0;
+                        display: flex;
+                        color: $color-gray;
+                        font: normal normal 500 12px/18px $font-noto-sans;
+
+                        .outProducts__card__info__middle--size {
+                            margin-left: 26px;
+                        }
+                    }
+                    .outProducts__card__info__price {
+                        color: $color-black;
+                        font: normal normal 700 14px/20px $font-noto-sans;
+                    }
+
+                    .outProducts__card__info__gift {
+                        display: flex;
+                        border-radius: 8px;
+                        margin-top: 6px;
+                        background: var(--secondary-color-mon-yellow-40, #FCEED5);
+                        padding: 6px 10px 4px 10px;
+
+                        .outProducts__card__info__gift--text {
+                            margin-left: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive(pc) {
+    #outProducts {
+        padding-top: 40px;
+        @include basePcScreenWrapper();
+
+        .outProducts__content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+        }
+    }
+}
+
+@include responsive(sp) {
+    #outProducts {
+        padding: 20px;
+        .outProducts__title {
+            .outProducts__title__first {
+                font: normal normal 500 16px/24px $font-noto-sans;
+            }
+            .outProducts__title__second {
+
+                .outProducts__title__second--text {
+                }
+
+                a {
+                    display: none;
+                }
+            }
+        }
+
+        .outProducts__content {
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
+
+            .outProducts__card {
+                img {
+                    width: 100%;
+
+                    .outProducts__card__info {
+                        .outProducts__card__info__gift {
+
+                            .outProducts__card__info__gift--text {
+                                font: normal normal 500 12px/20px $font-noto-sans;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -8,4 +8,5 @@
     @include('pages.homepage.includes.top-banner')
     @include('pages.homepage.includes.list-pet')
     @include('pages.homepage.includes.middle-banner')
+    @include('pages.homepage.includes.out-products')
 @endsection
