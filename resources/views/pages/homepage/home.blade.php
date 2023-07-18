@@ -9,4 +9,6 @@
     @include('pages.homepage.includes.list-pet')
     @include('pages.homepage.includes.middle-banner')
     @include('pages.homepage.includes.out-products')
+    @include('pages.homepage.includes.pet-sellers')
+    @include('pages.homepage.includes.bottom-banner')
 @endsection
