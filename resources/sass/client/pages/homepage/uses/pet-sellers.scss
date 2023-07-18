@@ -1,0 +1,54 @@
+@use '../../../base/variables' as *;
+@use '../../../base/mixins' as *;
+
+#petSellers {
+    #petSellers__wrapper {
+        .petSellers__title {
+            .petSellers__title__first {
+                font: normal normal 500 16px/24px $font-noto-sans;
+            }
+            .petSellers__title__second {
+                display: flex;
+                justify-content: space-between;
+
+                .petSellers__title__second--text {
+                    font: normal normal 700 24px/36px $font-noto-sans;
+                    margin-top: 12px;
+                }
+
+                .petSellers__title__second--button {
+                    display: flex;
+                    padding: 12px 28px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 8px;
+                    border-radius: 57px;
+                    border: 1.5px solid $dark-blue;
+                }
+            }
+        }
+
+        .petSellers__content {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+
+            .petSellers__proud {
+                padding: 0 16px;
+            }
+        }
+    }
+}
+
+@include responsive(pc) {
+    #petSellers {
+        padding-top: 40px;
+        @include basePcScreenWrapper();
+    }
+}
+
+@include responsive(sp) {
+    #petSellers {
+        display: none;
+    }
+}

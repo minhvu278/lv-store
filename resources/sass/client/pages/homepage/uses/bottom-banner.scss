@@ -1,0 +1,84 @@
+@use '../../../base/variables' as *;
+@use '../../../base/mixins' as *;
+
+#bottomBanner {
+    #bottomBanner__wrapper {
+        border-radius: 20px;
+        background: $bg-orange;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .bottomBanner__left {
+            .bottomBanner__left__wrapper {
+                margin-left: 30px;
+                .bottomBanner__left__title {
+                    margin-top: 34px;
+
+                    .bottomBanner__left__title__first {
+                        font: normal normal 800 52px/68px $font-noto-sans;
+                    }
+                    .bottomBanner__left__title__second {
+                        font: normal normal 700 36px/54px $font-noto-sans;
+                    }
+                }
+                .bottomBanner__left__description {
+                    font: normal normal 500 12px/18px $font-noto-sans;
+                    padding: 8px 0 24px;
+                }
+                .bottomBanner__left__button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .bottomBanner__left__button--first,
+                    .bottomBanner__left__button--last {
+                        position: relative;
+                        padding: 14px 28px 14px 28px;
+                        border-radius: 57px;
+                        border: 1.5px solid $dark-blue;
+                        display: flex;
+                    }
+
+                    .bottomBanner__left__button--first {
+                        img {
+                            margin-left: 8px;
+                        }
+                    }
+
+                    .bottomBanner__left__button--last {
+                        background: $dark-blue;
+                        margin-left: 10px;
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+
+        .bottomBanner__right {
+            background-image: url('/resources/assets/client/pages/homepage/bottom-banner/bottom-right.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: bottom;
+            border-radius: 15px;
+        }
+    }
+}
+
+@include responsive(pc) {
+    #bottomBanner {
+        padding-top: 60px;
+        @include basePcScreenWrapper();
+
+        .bottomBanner__left {
+
+        }
+        .bottomBanner__left {}
+    }
+}
+
+@include responsive(sp) {
+    #bottomBanner {
+        display: none;
+    }
+}
