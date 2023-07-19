@@ -11,4 +11,5 @@
     @include('pages.homepage.includes.out-products')
     @include('pages.homepage.includes.pet-sellers')
     @include('pages.homepage.includes.bottom-banner')
+    @include('pages.homepage.includes.pet-knowledge')
 @endsection

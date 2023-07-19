@@ -1,0 +1,136 @@
+@use '../../../base/variables' as *;
+@use '../../../base/mixins' as *;
+
+#petKnowledge {
+    #petKnowledge__wrapper {
+        .petKnowledge__title {
+            .petKnowledge__title__first {
+                font: normal normal 500 16px/24px $font-noto-sans;
+            }
+            .petKnowledge__title__second {
+                display: flex;
+                justify-content: space-between;
+
+                .petKnowledge__title__second--text {
+                    font: normal normal 700 24px/36px $font-noto-sans;
+                    margin-top: 12px;
+                }
+
+                .petKnowledge__title__second--button {
+                    display: flex;
+                    padding: 12px 28px;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 8px;
+                    border-radius: 57px;
+                    border: 1.5px solid $dark-blue;
+                }
+            }
+        }
+
+        .petKnowledge__content {
+            padding-bottom: 60px;
+
+            .petKnowledge__card {
+                margin-top: 20px;
+                padding: 8px 8px 0 8px;
+                border-radius: 12px;
+                background: var(--neutral-color-00, #FDFDFD);
+                box-shadow: 0 4px 28px -2px rgba(0, 0, 0, 0.08);
+
+                img {
+                    border-radius: 10px;
+                }
+
+                .petKnowledge__card__info {
+                    padding: 8px 8px 20px 8px;
+
+                    .petKnowledge__card__info__tag {
+                        color: $color-white;
+                        font: normal normal 700 10px/16px $font-noto-sans;
+
+                        span {
+                            border-radius: 28px;
+                            background: var(--state-color-blue-sea, #00A7E7);
+                            padding: 2px 10px;
+                        }
+                    }
+
+                    .petKnowledge__card__info__title {
+                        display: flex;
+                        color: $color-black;
+                        padding: 10px 0;
+                        font: normal normal 700 16px/24px $font-noto-sans;
+                    }
+
+                    .petKnowledge__card__info__description {
+                        color: $color-black;
+                        font: normal normal 400 14px/20px $font-noto-sans;
+                    }
+
+                    .petKnowledge__card__info__gift {
+                        display: flex;
+                        border-radius: 8px;
+                        margin-top: 6px;
+                        background: var(--secondary-color-mon-yellow-40, #FCEED5);
+                        padding: 6px 10px 4px 10px;
+
+                        .petKnowledge__card__info__gift--text {
+                            margin-left: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive(pc) {
+    #petKnowledge {
+        padding-top: 40px;
+        @include basePcScreenWrapper();
+
+        .petKnowledge__content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
+    }
+}
+
+@include responsive(sp) {
+    #petKnowledge {
+        padding: 20px;
+        .petKnowledge__title {
+            .petKnowledge__title__first {
+                font: normal normal 500 16px/24px $font-noto-sans;
+            }
+            .petKnowledge__title__second {
+                a {
+                    display: none;
+                }
+            }
+        }
+
+        .petKnowledge__content {
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(1, 1fr);
+
+            .petKnowledge__card {
+                img {
+                    width: 100%;
+
+                    .petKnowledge__card__info {
+                        .petKnowledge__card__info__gift {
+
+                            .petKnowledge__card__info__gift--text {
+                                font: normal normal 500 12px/20px $font-noto-sans;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
