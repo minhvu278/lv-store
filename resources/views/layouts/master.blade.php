@@ -20,6 +20,7 @@
 @include('partials.footer')
 @vite([
     'resources/js/master.js',
+    'resources/js/client/partials/header.js',
 ])
 @stack('js')
 
