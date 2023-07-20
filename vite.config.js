@@ -15,6 +15,7 @@ export default defineConfig({
                 'resources/sass/client/partials/header.scss',
                 'resources/sass/client/partials/footer.scss',
                 'resources/js/master.js',
+                'resources/sass/client/pages/client/dogs/small-dog.scss',
             ],
             refresh: true,
         }),

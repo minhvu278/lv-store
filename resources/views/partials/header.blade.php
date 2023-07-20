@@ -9,14 +9,14 @@
         <div id="header__nav">
             @foreach (__('client/partials/header.items') as $item)
                 <div class="header__nav__item header__nav__item--hover">
-                    <label for="header__nav-{{ $loop->index }}"
+                    <a href="{{ $item['link'] ?? '#' }}" for="header__nav-{{ $loop->index }}"
                            @class([
                                'header__nav__item__name',
                                'header__nav__item__name--active-route' => isActiveRouteForHeader($item)
                            ])
                     >
                         {{ $item['name'] ?? '' }}
-                    </label>
+                    </a>
                 </div>
             @endforeach
 

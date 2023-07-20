@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\client\DogController;
 use App\Http\Controllers\HomePageController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomePageController::class, 'index'])->name('index');
+
+Route::controller(DogController::class)->group(function () {
+    Route::get('/dogs/small-dogs', 'index')->name('dogs.small');
+});

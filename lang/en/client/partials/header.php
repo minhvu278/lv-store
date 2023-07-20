@@ -3,7 +3,8 @@
 return [
     'items' =>[
         [
-            'name' => 'Home'
+            'name' => 'Home',
+            'link' => route('dogs.small')
         ],
         [
             'name' => 'Category'
