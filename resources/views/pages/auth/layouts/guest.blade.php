@@ -13,18 +13,9 @@
     ])
 </head>
 
-<body class="border-top-wide border-primary d-flex flex-column">
-
-<div class="page page-center">
-    <div class="container-tight py-4">
-        <div class="text-center mb-4 mx-auto">
-{{--            <a href="{{ config('app.url') }}" class="navbar-brand navbar-brand-autodark">--}}
-{{--                <img src="{{ Vite::asset('resources/client/assets/partials/header/logo.svg') }}" height="36" alt="" />--}}
-{{--            </a>--}}
-        </div>
-
-        @yield('content')
-    </div>
+<body>
+<div>
+    @yield('content')
 </div>
 
 @vite([
