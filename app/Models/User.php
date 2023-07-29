@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use App\Enums\Role;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -50,13 +49,20 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
+    const STATUS = [
+        'REQUEST' => 0,
+        'ACTIVE' => 1,
+        'REJECTED' => 2,
+        'BLOCKED' => 3
+    ];
+
     public function isAdmin(): bool
     {
-        return $this->role_id ===Role::ADMIN->value;
+        return $this->role_id === Role::ADMIN->value;
     }
 
     public function isUser(): bool
     {
-        return $this->role_id ===Role::USER->value;
+        return $this->role_id === Role::USER->value;
     }
 }

@@ -52,11 +52,9 @@
             </div>
         </form>
 
-        @if (Route::has('password.request'))
-            <p class="mb-1">
-                <a href="{{ route('password.request') }}">{{ __('Forgot Your Password?') }}</a>
-            </p>
-        @endif
+        <div class="form-footer">
+            <a href="{{ route('admin.password.forgot') }}" class="link-forgot-password">Reset password</a>
+        </div>
     </div>
     <!-- /.login-card-body -->
 @endsection

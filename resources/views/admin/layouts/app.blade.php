@@ -22,31 +22,38 @@
         <!-- Left navbar links -->
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button">
+                    <i class="fas fa-bars"></i>
+                </a>
             </li>
         </ul>
 
         <!-- Right navbar links -->
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
-                <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
-                    {{ Auth::user()->name }}
+                <a class="nav-link dropdown-toggle" href="#" role="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    {{ Auth::user()->username }}
                 </a>
-                <div class="dropdown-menu dropdown-menu-right" style="left: inherit; right: 0;">
-                    <a href="{{ route('profile.show') }}" class="dropdown-item">
-                        <i class="mr-2 fas fa-file"></i>
-                        {{ __('My profile') }}
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-                        <a href="{{ route('logout') }}" class="dropdown-item"
-                           onclick="event.preventDefault(); this.closest('form').submit();">
-                            <i class="mr-2 fas fa-sign-out-alt"></i>
-                            {{ __('Log Out') }}
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start" aria-labelledby="userDropdown">
+                    <li>
+                        <a href="#" class="dropdown-item">
+                            <i class="mr-2 fas fa-file"></i>
+                            {{ __('My profile') }}
                         </a>
-                    </form>
-                </div>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li>
+                        <form method="GET" action="{{ route('admin.logout') }}">
+                            @csrf
+                            <a href="{{ route('admin.logout') }}" class="dropdown-item" onclick="event.preventDefault(); this.closest('form').submit();">
+                                <i class="mr-2 fas fa-sign-out-alt"></i>
+                                {{ __('Log Out') }}
+                            </a>
+                        </form>
+                    </li>
+                </ul>
             </li>
         </ul>
     </nav>
