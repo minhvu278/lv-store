@@ -28,6 +28,10 @@ Route::group(['as' => 'admin.', 'prefix' => 'admin'], function () {
     Route::controller(AuthController::class)->group(function () {
         Route::get('/login', 'showLoginForm')->name('login.form');
         Route::post('/login', 'login')->name('login.action');
+        Route::get('/password/forgot', 'showLinkRequestForm')->name('password.forgot');
+        Route::post('/password/email', 'sendResetPassword')->name('password.email.send');
+        Route::get('/new-password', 'showChangePasswordForm')->name('password.reset');
+        Route::post('/new-password', 'changePassword')->name('password.update');
     });
 
     Route::group(['middleware' => ['auth', 'can:admin']], function () {

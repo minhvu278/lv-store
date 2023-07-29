@@ -4,10 +4,8 @@
     <div class="card-body login-card-body">
         <p class="login-box-msg">{{ __('Reset Password') }}</p>
 
-        <form method="POST" action="{{ route('password.update') }}">
+        <form method="POST" action="{{ route('admin.password.update', ['token' => request()->query('token')]) }}">
             @csrf
-
-            <input type="hidden" name="token" value="{{ $token }}">
 
             <div class="input-group mb-3">
                 <input type="email" name="email" class="form-control @error('email') is-invalid @enderror"
