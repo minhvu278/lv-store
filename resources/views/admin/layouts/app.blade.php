@@ -33,14 +33,14 @@
                     {{ Auth::user()->name }}
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" style="left: inherit; right: 0;">
-                    <a href="{{ route('profile.show') }}" class="dropdown-item">
+                    <a href="#" class="dropdown-item">
                         <i class="mr-2 fas fa-file"></i>
                         {{ __('My profile') }}
                     </a>
                     <div class="dropdown-divider"></div>
-                    <form method="POST" action="{{ route('logout') }}">
+                    <form method="POST" action="#">
                         @csrf
-                        <a href="{{ route('logout') }}" class="dropdown-item"
+                        <a href="#" class="dropdown-item"
                            onclick="event.preventDefault(); this.closest('form').submit();">
                             <i class="mr-2 fas fa-sign-out-alt"></i>
                             {{ __('Log Out') }}
