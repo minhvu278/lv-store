@@ -6,6 +6,9 @@
                     <h1 class="m-0">{{ $pageTitle }}</h1>
                 @endif
             </div>
+            @if (!empty($slot))
+                {{ $slot }}
+            @endif
         </div>
     </div>
 </div>
