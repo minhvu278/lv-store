@@ -65,4 +65,9 @@ class User extends Authenticatable
     {
         return $this->role_id === Role::USER->value;
     }
+
+    public function scopeGetUsersWithTrashed($query)
+    {
+        return $query->withTrashed();
+    }
 }
