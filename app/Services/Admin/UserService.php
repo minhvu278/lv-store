@@ -25,4 +25,14 @@ class UserService extends BaseService
     {
         return User::query()->create($data);
     }
+
+    public function update($user, $data)
+    {
+        $user->update($data);
+    }
+
+    public function delete($user)
+    {
+        $user->delete();
+    }
 }

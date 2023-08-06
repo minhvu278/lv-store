@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\User\StoreRequest;
+use App\Http\Requests\Admin\User\UpdateRequest;
 use App\Models\User;
 use App\Services\Admin\UserService;
 use Illuminate\Http\RedirectResponse;
@@ -42,18 +43,6 @@ class UserController extends Controller
         $this->userService->create($request->validated());
         return redirect()->route('admin.users.index');
     }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(User $user)
     {
         return view('admin.users.edit', [
@@ -64,16 +53,18 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateRequest $request, User $user): RedirectResponse
     {
-        //
+        $this->userService->update($user, $request->validated());
+        return redirect()->route('admin.users.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(User $user)
     {
-        //
+        $this->userService->delete($user);
+        return redirect()->route('admin.users.index');
     }
 }

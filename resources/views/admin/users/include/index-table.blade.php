@@ -37,9 +37,21 @@
                             </td>
                         </tr>
                     @endforeach
+
+                    @component('admin.components.modal.confirm-delete', [
+                            'modalId' => 'deleteUserModal',
+                            'title' => 'Delete modal',
+                            'message' => 'Are you sure'
+                        ])
+                    @endcomponent
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 </div>
+
+@section('script')
+    @vite(['resources/js/admin/user/index.js'])
+@endsection
+
