@@ -2,12 +2,11 @@
 
 @section('content')
     @component('admin.components.page.header', [
-        'pageTitle' => 'List User'
+        'pageTitle' => 'Create User'
     ])
-        @include('admin.users.include.index-header')
     @endcomponent
 
     @component('admin.components.page.body')
-        @include('admin.users.include.index-table')
+        @include('admin.users.include.create-form')
     @endcomponent
 @endsection
