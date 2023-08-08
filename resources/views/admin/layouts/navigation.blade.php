@@ -30,10 +30,10 @@
             </li>
 
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{ route('admin.pets.index') }}" class="nav-link">
                     <i class="nav-icon far fa-address-card"></i>
                     <p>
-                        {{ __('About us') }}
+                        {{ __('Pets') }}
                     </p>
                 </a>
             </li>
