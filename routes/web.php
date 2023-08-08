@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\Auth\AuthController;
+use App\Http\Controllers\Admin\PetController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\HomePageController;
 use Illuminate\Support\Facades\Route;
@@ -39,4 +40,9 @@ Route::group(['as' => 'admin.', 'prefix' => 'admin'], function () {
 
     //user
     Route::resource('users', UserController::class);
+
+    Route::group(['controller' => PetController::class, 'prefix' => 'pets', 'as' => 'pets.'], function () {
+        Route::get('/', 'index')->name('index');
+        Route::post('/change-data', 'changeData')->name('change-data');
+    });
 });
